@@ -185,7 +185,8 @@ void solve()
         if(ch1=='-')u^=1;
         if(ch2=='-')v^=1;
         
-        //for any topping val a--->2*a-1 represents '+' and 2*a represents '-'
+        //for any topping val a--->2*(a-1) represents '+' and 2*(a-1)+1 represents '-'
+        //for eg: if topping is 1 so if '+' 1 means node 0 and '-' 1 means node 1
         graph[u^1].push_back(v);
         graph[v^1].push_back(u);
         rev_graph[v].push_back(u^1);
